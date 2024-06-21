@@ -22,4 +22,5 @@ urlpatterns = [
     path("admin/", admin.site.urls),
     path("app/request/", views.index),
     path("app/", views.hello),
+    path("app/<int:pk>/", views.post_detail),
 ]
