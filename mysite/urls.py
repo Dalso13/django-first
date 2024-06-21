@@ -23,4 +23,5 @@ urlpatterns = [
     path("app/request/", views.index),
     path("app/", views.hello),
     path("app/<int:pk>/", views.post_detail),
+    path("app/new/", views.post_new),
 ]
