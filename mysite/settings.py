@@ -44,8 +44,8 @@ INSTALLED_APPS = [
     "django.contrib.messages",
     "django.contrib.staticfiles",
     "django_bootstrap5",
-    "app",
     "accounts",
+    "app",
     "catube",
 ]
 
@@ -138,3 +138,5 @@ EMAIL_PORT = env.int("EMAIL_PORT")
 EMAIL_USE_SSL = env.bool("EMAIL_USE_SSL")
 EMAIL_HOST_USER = env.str("EMAIL_HOST_USER")
 EMAIL_HOST_PASSWORD = env.str("EMAIL_HOST_PASSWORD")
+
+LOGIN_REDIRECT_URL = "/app/"

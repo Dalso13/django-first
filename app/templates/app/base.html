@@ -10,7 +10,15 @@
 </head>
 <body>
     <h1>장고 입문</h1>
-
+    {% if user.is_authenticated %}
+        <form action="/accounts/logout/" method="post">
+            {% csrf_token %}
+            <input type="submit" value="로그아웃" />
+        </form>
+    {% else %}
+        {{ user }}
+        <div><a href="/accounts/login/">로그인</a> </div>
+    {% endif %}
     {% block content %}
     {% endblock %}
 
